@@ -1,3 +1,26 @@
+{if $product == 'multiple_product'}
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+      <p class="payment_module">
+        <a class="bankwire">
+          <span>*Please note: Installment payment is not supported for multiple products in Cart.</span>
+        </a>
+      </p>
+  </div>
+</div>
+
+{else if $product == 'not_installment'}
+<div class="row">
+  <div class="col-xs-12 col-md-6">
+      <p class="payment_module">
+        <a class="bankwire">
+          <span>*Product doesn't suppport installment as payment.</span>
+        </a>
+      </p>
+  </div>
+</div>
+
+{else}
 <div class="row">
   <div class="col-xs-12 col-md-6">
     <p class="payment_module">
@@ -12,3 +35,4 @@
     </p>  
   </div>
 </div>
+{/if}

@@ -56,7 +56,7 @@ class VeritransMandiri extends PaymentModule
 			'VM_ENVIRONMENT',
 			'VM_SANITIZED',
 			'VM_ENABLE_INSTALLMENT',
-			'ENABLED_BNI_INSTALLMENT',
+			// 'ENABLED_BNI_INSTALLMENT',
 			'ENABLED_MANDIRI_INSTALLMENT',
 			'VM_INSTALLMENTS_BNI',
 			'VM_INSTALLMENTS_MANDIRI'
@@ -917,8 +917,26 @@ class VeritransMandiri extends PaymentModule
 			return;
 
 		$cart = $this->context->cart;
+		
+		$product = 'single_product';
+		$products_cart = $cart->getProducts();
+		$num_product = count($products_cart);
+		if($num_product == 1){
+			$attr_product = explode(',',$products_cart[0]['attributes_small']);
+			foreach($attr_product as $att){
+				$att_trim = ltrim($att);						
+				$att_arr = explode(' ',$att_trim);
+				//error_log(print_r($att_arr,true));
+				if(strtolower($att_arr[0]) != 'installment'){
+					$product = 'not_installment';
+				} 						
+			}
+		}else{
+			$product = 'multiple_product';
+		}
 
 		$this->context->smarty->assign(array(
+			'product'=> $product,
 			'cart' => $cart,
 			'this_path' => $this->_path,
 			'this_path_ssl' => Tools::getShopDomainSsl(true, true).__PS_BASE_URI__.'modules/'.$this->name.'/'
