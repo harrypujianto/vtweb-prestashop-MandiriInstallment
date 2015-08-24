@@ -1113,7 +1113,7 @@ class VeritransMandiri extends PaymentModule
 		
    //  	if (Configuration::get('VM_3D_SECURE') == 'on' || Configuration::get('VM_3D_SECURE') == 1)
 			// Veritrans_Config::$is3ds = true;		
-		Veritrans_Config::$is3ds = false;		
+		Veritrans_Config::$is3ds = true;		
 
 		// if (Configuration::get('VM_SANITIZED') == 'on' || Configuration::get('VM_SANITIZED') == 1)
 			Veritrans_Config::$isSanitized = false;

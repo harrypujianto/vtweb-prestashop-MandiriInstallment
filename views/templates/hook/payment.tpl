@@ -6,7 +6,7 @@
       {else}
         <a class="bankwire" href="{$link->getModuleLink('veritransmandiri', 'payment')}" title="MANDIRI Installment">
       {/if}
-        <img src="{$this_path}vtwebmandiri.png" alt="{l s='MANDIRI Installment' mod='veritransmandiri'}" height="30px"/>
+        <img src="{$this_path}vtwebmandiri.png" alt="{l s='MANDIRI Installment' mod='veritransmandiri'}" />
         {l s=''}
       </a>
     </p>  
