@@ -3,7 +3,7 @@
   <div class="col-xs-12 col-md-6">
       <p class="payment_module">
         <a class="bankwire">
-          <span>*Please note: Installment payment is not supported for multiple products in Cart.</span>
+          <span>*Please note: Mandiri Installment payment is not supported for multiple products in Cart.</span>
         </a>
       </p>
   </div>
@@ -14,7 +14,7 @@
   <div class="col-xs-12 col-md-6">
       <p class="payment_module">
         <a class="bankwire">
-          <span>*Product doesn't suppport installment as payment.</span>
+          <span>*Product doesn't support Mandiri installment as payment.</span>
         </a>
       </p>
   </div>
