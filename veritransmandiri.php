@@ -922,14 +922,16 @@ class VeritransMandiri extends PaymentModule
 		$product = 'single_product';
 		$products_cart = $cart->getProducts();
 		$num_product = count($products_cart);
-		if($num_product == 1){
+		if($num_product == 1 && Configuration::get('VM_ENABLE_INSTALLMENT') == 'certain_product'){
+			$product = 'not_installment';
 			$attr_product = explode(',',$products_cart[0]['attributes_small']);
 			foreach($attr_product as $att){
 				$att_trim = ltrim($att);						
 				$att_arr = explode(' ',$att_trim);
-				//error_log(print_r($att_arr,true));
-				if(strtolower($att_arr[0]) != 'installment'){
-					$product = 'not_installment';
+				error_log(print_r($att_arr,true)); //debugan
+				if(strtolower($att_arr[0]) == 'installment'){
+					$product = 'single_product';
+					break;
 				} 						
 			}
 		}else{
