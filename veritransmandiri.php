@@ -937,7 +937,7 @@ class VeritransMandiri extends PaymentModule
 		}else{
 			$product = 'multiple_product';
 		}
-		if (Configuration::get('VM_ENABLE_INSTALLMENT') == 'all_product' && $num_product == 1) 
+		if (Configuration::get('VM_ENABLE_INSTALLMENT') == 'all_product' /*&& $num_product == 1*/) 
 			$product = 'installment';
 		if (Configuration::get('VM_ENABLE_INSTALLMENT') == 'off' || !Configuration::get('VM_ENABLED_MANDIRI_INSTALLMENT')) 
 			$product = 'installment_off';

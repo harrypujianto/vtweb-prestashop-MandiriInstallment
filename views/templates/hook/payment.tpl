@@ -5,7 +5,7 @@
   <div class="col-xs-12 col-md-6">
       <p class="payment_module">
         <a class="bankwire">
-          <img src="{$this_path}vtwebmandiri.png" alt="{l s='BNI Installment' mod='veritransbni'}" /><br/><span>*Please note: Mandiri Installment payment is only allowed for one product type on your cart</span>
+          <img src="{$this_path}vtwebmandiri.png" alt="{l s='BNI Installment' mod='veritransbni'}" /><br/><span>*Please note: Mandiri Installment payment is only allowed for one product type on your cart (and only if the prduct allow payment by installment)</span>
         </a>
       </p>
   </div>
